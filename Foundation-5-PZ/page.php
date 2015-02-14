@@ -11,9 +11,11 @@
  */
 
 get_header(); ?>
-
-	<div id="primary" class="content-area">
+<!-- page.php -->
+<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+			<div class="row page">
+				<div class="small-16 large-centered">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
@@ -28,6 +30,8 @@ get_header(); ?>
 
 			<?php endwhile; // end of the loop. ?>
 
+				</div><!-- # -->
+			</div><!-- .row .index -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
