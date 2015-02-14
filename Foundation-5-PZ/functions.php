@@ -100,7 +100,11 @@ add_action( 'widgets_init', 'foundation_5_widgets_init' );
  * Enqueue scripts and styles.
  */
 function foundation_5_scripts() {
-	wp_enqueue_style( 'foundation-5-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'foundation-5-style', get_template_directory_uri() . '/css/foundation.min.css' );
+
+	wp_enqueue_style( 'foundation-5-customizations', get_stylesheet_uri() );
+
+	wp_enqueue_style( 'google-web-fonts-raleway', 'http://fonts.googleapis.com/css?family=Raleway:400,300,200,100,500,600' );
 
 	wp_enqueue_script( 'foundation-5-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
